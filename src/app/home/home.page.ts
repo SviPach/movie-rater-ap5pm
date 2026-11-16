@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import {
   IonContent,
   IonHeader,
@@ -10,6 +11,7 @@ import {
 } from '@ionic/angular';
 
 interface Movie {
+  id: number;
   title: string;
   year: number;
   genre: string;
@@ -23,6 +25,7 @@ interface Movie {
   imports: [
     CommonModule,
     FormsModule,
+    RouterLink,
     IonContent,
     IonHeader,
     IonTitle,
@@ -35,24 +38,28 @@ export class HomePage {
 
   movies: Movie[] = [
     {
+      id: 1,
       title: 'Interstellar',
       year: 2014,
       genre: 'Sci-Fi',
       poster: 'https://image.tmdb.org/t/p/w600_and_h900_face/6qdusBmmCndnYs1jkf7BSUrIoBr.jpg',
     },
     {
+      id: 2,
       title: 'Inception',
       year: 2010,
       genre: 'Sci-Fi',
       poster: 'https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg',
     },
     {
+      id: 3,
       title: 'Dune',
       year: 2021,
       genre: 'Adventure',
       poster: 'https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg',
     },
     {
+      id: 4,
       title: 'The Dark Knight',
       year: 2008,
       genre: 'Action',

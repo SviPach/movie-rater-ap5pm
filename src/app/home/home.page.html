@@ -25,7 +25,11 @@
     </div>
 
     <div class="movies-grid">
-      <article class="movie-card" *ngFor="let movie of filteredMovies">
+      <article
+        class="movie-card"
+        *ngFor="let movie of filteredMovies"
+        [routerLink]="['/tabs/movie', movie.id]"
+      >
         <img
           class="movie-poster"
           [src]="movie.poster"
