@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>MovieRater</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content">
+  <div class="welcome-section">
+    <h1>Discover movies</h1>
+    <p>Find your next favorite movie.</p>
+  </div>
+
+  <div class="search-section">
+    <ion-searchbar
+      [(ngModel)]="searchTerm"
+      placeholder="Search movies..."
+      animated="true"
+    ></ion-searchbar>
+  </div>
+
+  <section class="movies-section">
+    <div class="section-heading">
+      <h2>Popular Movies</h2>
+      <span>{{ filteredMovies.length }} movies</span>
+    </div>
+
+    <div class="movies-grid">
+      <article class="movie-card" *ngFor="let movie of filteredMovies">
+        <img
+          class="movie-poster"
+          [src]="movie.poster"
+          [alt]="movie.title + ' poster'"
+        />
+
+        <div class="movie-info">
+          <h3>{{ movie.title }}</h3>
+          <p>{{ movie.year }} · {{ movie.genre }}</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="empty-state" *ngIf="filteredMovies.length === 0">
+      <h3>No movies found</h3>
+      <p>Try searching for another title.</p>
+    </div>
+  </section>
+</ion-content>
