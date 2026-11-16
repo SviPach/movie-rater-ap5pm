@@ -1,3 +1,4 @@
+
 import { Component, EnvironmentInjector, inject } from '@angular/core';
 import {
   IonIcon,
@@ -8,8 +9,10 @@ import {
 } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import {
-  calculatorOutline,
-  informationCircleOutline,
+  homeOutline,
+  personOutline,
+  starOutline,
+  statsChartOutline,
   timeOutline,
 } from 'ionicons/icons';
 
@@ -24,8 +27,10 @@ export class TabsPage {
 
   constructor() {
     addIcons({
-      calculatorOutline,
-      informationCircleOutline,
+      homeOutline,
+      personOutline,
+      starOutline,
+      statsChartOutline,
       timeOutline,
     });
   }
