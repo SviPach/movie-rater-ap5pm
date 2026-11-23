@@ -9,4 +9,11 @@ export class Tmdb {
     // email: hekak82517@dvdee.com
     private apiToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMmE1NmEzMjY5ZGUyOGRiY2VhZDQ4ZTgyYzQ4MGJiMyIsIm5iZiI6MTc5NTQ0MDc0MS43NDMsInN1YiI6IjZiMDQ0MDY1ZTQ5MWJlZGQxYTUyZGU2NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vvjwCfoNhms7L0TUPNgpBnZu6GmTdXpWZ8IPnwIiwJg';
     constructor(private http: HttpClient) {}
+    getPopularMovies() {
+        return this.http.get(`${this.apiUrl}/movie/popular`, {
+            headers: {
+                Authorization: `Bearer ${this.apiToken}`,
+            },
+        });
+    }
 }
