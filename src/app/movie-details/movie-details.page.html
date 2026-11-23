@@ -4,11 +4,12 @@
       <ion-back-button defaultHref="/tabs/home"></ion-back-button>
     </ion-buttons>
 
-    <h1>{{ movie.title }}</h1>
-
+    <ion-title>Movie Details</ion-title>
   </ion-toolbar>
-
-    <p>{{ movie.year }} · {{ movie.genre }}</p>
-    <img [src]="movie.poster" [alt]="movie.title">
-
 </ion-header>
+
+<ion-content>
+  @if (movie) {
+    <h1>{{ movie.title }}</h1>
+  }
+</ion-content>
