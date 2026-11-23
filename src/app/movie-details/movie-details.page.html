@@ -27,5 +27,20 @@
     <p class="tmdb-rating">
       TMDB Rating: {{ movie.vote_average | number:'1.1-1' }} / 10
     </p>
+
+    <div class="my-rating">
+      <h2>My Rating</h2>
+
+      <ion-select
+        [(ngModel)]="myRating"
+        placeholder="Select rating"
+      >
+        @for (rating of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; track rating) {
+          <ion-select-option [value]="rating">
+            {{ rating }} / 10
+          </ion-select-option>
+        }
+      </ion-select>
+    </div>
   }
 </ion-content>

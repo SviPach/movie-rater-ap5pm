@@ -1,6 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Tmdb } from '../services/tmdb';
 import {
   IonContent,
@@ -9,6 +10,8 @@ import {
   IonToolbar,
   IonButtons,
   IonBackButton,
+  IonSelect,
+  IonSelectOption,
 } from '@ionic/angular';
 
 interface Movie {
@@ -31,11 +34,16 @@ interface Movie {
     IonButtons,
     IonBackButton,
     DecimalPipe,
+    FormsModule,
+    IonSelect,
+    IonSelectOption,
   ],
 })
 export class MovieDetailsPage {
 
   movie: any = null;
+
+  myRating: number = 0;
 
   movieId: string | null = null;
 
