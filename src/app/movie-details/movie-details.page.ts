@@ -5,6 +5,8 @@ import {
   IonHeader,
   IonTitle,
   IonToolbar,
+  IonButtons,
+  IonBackButton,
 } from '@ionic/angular';
 
 @Component({
@@ -16,6 +18,8 @@ import {
     IonHeader,
     IonTitle,
     IonToolbar,
+    IonButtons,
+    IonBackButton,
   ],
 })
 export class MovieDetailsPage {
