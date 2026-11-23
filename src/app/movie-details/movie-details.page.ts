@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {
   IonContent,
   IonHeader,
@@ -23,5 +24,11 @@ import {
   ],
 })
 export class MovieDetailsPage {
+
+  movieId: string | null = null;
+
+  constructor(private route: ActivatedRoute) {
+    this.movieId = this.route.snapshot.paramMap.get('id');
+  }
 
 }
