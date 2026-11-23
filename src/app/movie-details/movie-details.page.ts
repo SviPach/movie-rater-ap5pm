@@ -1,4 +1,5 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Tmdb } from '../services/tmdb';
 import {
@@ -29,6 +30,7 @@ interface Movie {
     IonToolbar,
     IonButtons,
     IonBackButton,
+    DecimalPipe,
   ],
 })
 export class MovieDetailsPage {
