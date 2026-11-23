@@ -61,3 +61,25 @@ ion-content {
   padding: 48px 20px;
   text-align: center;
 }
+
+img {
+  display: block;
+  width: 70%;
+  max-width: 280px;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+h1 {
+  padding: 0 20px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  padding: 0 20px;
+  color: #aaaaaa;
+  font-size: 14px;
+  line-height: 1.6;
+}

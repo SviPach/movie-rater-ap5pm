@@ -10,6 +10,20 @@
 
 <ion-content>
   @if (movie) {
+    <img
+      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+      [alt]="movie.title"
+    />
+
     <h1>{{ movie.title }}</h1>
+    <p>{{ movie.release_date }}</p>
+    <p>
+      @for (genre of movie.genres; track genre.id) {
+        {{ genre.name }}
+      }
+    </p>
+    <p>{{ movie.overview }}</p>
+    <p>{{ movie.runtime }} min</p>
+    <p>TMDB Rating: {{ movie.vote_average | number:'1.1-1' }} / 10</p>
   }
 </ion-content>
